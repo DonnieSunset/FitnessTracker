@@ -1,7 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; script-src 'self' http://cdn.jsdelivr.net/vue/1.0.16/vue.js https://cdn.jsdelivr.net/vue.resource/0.7.0/vue-resource.min.js 'unsafe-eval'; connect-src http://api.wordnik.com:80/v4/words.json/randomWord">
+        <meta   http-equiv="Content-Security-Policy" 
+                content="default-src 'self' data: gap: 
+                            https://s-usc1c-nss-203.firebaseio.com
+                            https://ssl.gstatic.com 'unsafe-eval'; 
+                        style-src 'self' 'unsafe-inline'; 
+                        media-src *; 
+                        script-src 'self' 
+                            https://s-usc1c-nss-203.firebaseio.com
+                            https://fitnesstracker-aac74.firebaseio.com 
+                            http://cdn.jsdelivr.net/vue/1.0.16/vue.js 
+                            https://cdn.jsdelivr.net/vue.resource/0.7.0/vue-resource.min.js 
+                            https://www.gstatic.com/firebasejs/4.8.1/firebase.js 'unsafe-eval'; 
+                        connect-src
+                            wss://s-usc1c-nss-203.firebaseio.com/ 
+                            http://api.wordnik.com:80/v4/words.json/randomWord;"
+        >
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
@@ -14,5 +29,6 @@
 
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
     </body>
 </html>

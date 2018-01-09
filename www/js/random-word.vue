@@ -1,12 +1,14 @@
 <template>
   <div class="app">      
     <h1>Random Word</h1> 
-    <button id="btn-get-random-word" @click="getRandomWord">Get Random Word</button>
+    <button id="btn-get-random-word" @click="writeUserData">Get Random Word</button>
     <p>{{randomWord}}</p>
   </div>
 </template>
 
 <script>
+var Firebase = require('firebase')
+
 export default {
   data () {
     return {
@@ -23,7 +25,38 @@ export default {
         }, function (error) {
             alert(error.data);
         });
-    }
+    },
+    initFirebase: function() {
+      // Set the configuration for your app
+      // TODO: Replace with your project's config object
+ 
+       // Get a reference to the storage service, which is used to create references in your storage bucket
+      var storage = Firebase.storage();
+            alert("4");
+
+      this.randomWord = storage;
+    },  
+
+    writeUserData: function () 
+    {
+      //write
+      Firebase.database().ref('users/' + "myID").set({
+        username: "Stef",
+        email: "Stef@h.de"
+      });
+
+      //read
+      var userId = "myID";
+      var username = "";
+      var dummyThis = this;
+      var bla = Firebase.database().ref('users/' + userId).once('value').then(function(snapshot) {
+        var username = 'Anonymous';
+        dummyThis.randomWord = (snapshot.val() && snapshot.val().username) || 'Anonymous';
+        
+      });
+
+      //this.randomWord = username;
+    },
   }
 }
 </script>

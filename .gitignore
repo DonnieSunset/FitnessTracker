@@ -59,3 +59,6 @@ typings/
 
 #platform specific files
 platforms/
+
+#other files
+.vscode
