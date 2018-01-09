@@ -37027,7 +37027,7 @@ module.exports = Vue;
 },{"_process":158}],163:[function(require,module,exports){
 var Vue = require('vue')
 var VueResource = require('vue-resource');
-var RandomWord = require('./random-word.vue')
+var Tracker = require('./tracker.vue')
 var Firebase = require('firebase')
 
 Vue.use(VueResource);
@@ -37055,10 +37055,10 @@ catch (err)
 var vm = new Vue({
   el: 'body',
   components: {
-    'random-word': RandomWord
+    'tracker': Tracker
   }
 });
-},{"./random-word.vue":164,"firebase":155,"vue":162,"vue-resource":161}],164:[function(require,module,exports){
+},{"./tracker.vue":164,"firebase":155,"vue":162,"vue-resource":161}],164:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -37209,9 +37209,9 @@ if (module.hot) {(function () {  module.hot.accept()
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   if (!module.hot.data) {
-    hotAPI.createRecord("_v-e7af7a74", module.exports)
+    hotAPI.createRecord("_v-0f877f2a", module.exports)
   } else {
-    hotAPI.update("_v-e7af7a74", module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
+    hotAPI.update("_v-0f877f2a", module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
 },{"dateformat":151,"firebase":155,"vue":162,"vue-hot-reload-api":160}]},{},[163]);

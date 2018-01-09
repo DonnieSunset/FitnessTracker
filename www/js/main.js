@@ -1,6 +1,6 @@
 var Vue = require('vue')
 var VueResource = require('vue-resource');
-var RandomWord = require('./random-word.vue')
+var Tracker = require('./tracker.vue')
 var Firebase = require('firebase')
 
 Vue.use(VueResource);
@@ -28,6 +28,6 @@ catch (err)
 var vm = new Vue({
   el: 'body',
   components: {
-    'random-word': RandomWord
+    'tracker': Tracker
   }
 });
